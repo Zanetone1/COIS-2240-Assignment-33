@@ -2,8 +2,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Library {
+
+    // Singleton instance
+    private static Library instance;
+
+    // Member and Book lists
     private List<Member> members = new ArrayList<>();
     private List<Book> books = new ArrayList<>();
+
+    // Private constructor to enforce singleton
+    private Library() {}
+
+    // Method to get the single instance of Library
+    public static Library getLibrary() {
+        if (instance == null) {
+            instance = new Library();
+        }
+        return instance;
+    }
 
     // Add a new member to the library
     public boolean addMember(Member member) {

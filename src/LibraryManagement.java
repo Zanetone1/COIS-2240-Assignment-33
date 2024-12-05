@@ -1,7 +1,10 @@
+//Christian Angelo
+//0803479
 import java.util.Scanner;
 
 public class LibraryManagement {
-    private Library library = new Library();
+	private Library library = Library.getLibrary();
+
 
     public static void main(String[] args) {
         new LibraryManagement().run();
